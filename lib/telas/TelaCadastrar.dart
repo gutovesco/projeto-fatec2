@@ -100,16 +100,15 @@ class _CadastroState extends State<Cadastro> {
           fontWeight: FontWeight.w400,
           color: Colors.white,
           fontSize: 20,
-          fontFamily: "Big Shoulders Display",),
-        
-          
-        
+          ),
       ),),
       body: Container(
+        color: Colors.white,
         padding: EdgeInsets.only(
           top: 0,
           left: 40,
           right: 40,
+          
         ),
       child: Center(
         child: SingleChildScrollView(
@@ -127,7 +126,7 @@ class _CadastroState extends State<Cadastro> {
                           labelStyle: TextStyle(
                           color: Colors.black87,
                           fontWeight: FontWeight.w400,
-                          fontSize: 25,
+                          fontSize: 20,
                           fontFamily: "Big Shoulders Display",
                           ),),
                     ),
@@ -139,7 +138,7 @@ class _CadastroState extends State<Cadastro> {
                           labelStyle: TextStyle(
                           color: Colors.black87,
                           fontWeight: FontWeight.w400,
-                          fontSize: 25,
+                          fontSize: 20,
                           fontFamily: "Big Shoulders Display",
                           ),),
                     ),
@@ -152,7 +151,7 @@ class _CadastroState extends State<Cadastro> {
                           labelStyle: TextStyle(
                           color: Colors.black87,
                           fontWeight: FontWeight.w400,
-                          fontSize: 25,
+                          fontSize: 20,
                           fontFamily: "Big Shoulders Display",
                           ),
                           
@@ -167,7 +166,7 @@ class _CadastroState extends State<Cadastro> {
                           labelStyle: TextStyle(
                           color: Colors.black87,
                           fontWeight: FontWeight.w400,
-                          fontSize: 25,
+                          fontSize: 20,
                           fontFamily: "Big Shoulders Display",
                           ),),
                     ),
@@ -205,7 +204,7 @@ class _CadastroState extends State<Cadastro> {
                        style: TextStyle(
                        fontWeight: FontWeight.w400,
                        color: Colors.black87,
-                       fontSize: 25,
+                       fontSize: 20,
                        fontFamily: "Big Shoulders Display", 
                        ),),
                     ),
@@ -217,7 +216,7 @@ class _CadastroState extends State<Cadastro> {
                               labelStyle: TextStyle(
                               color: Colors.black87,
                               fontWeight: FontWeight.w400,
-                              fontSize: 25,
+                              fontSize: 20,
                               fontFamily: "Big Shoulders Display",
                           ),),
                       keyboardType: TextInputType.number,
@@ -253,7 +252,7 @@ class _CadastroState extends State<Cadastro> {
                          style: TextStyle(
                            fontWeight: FontWeight.bold,
                            color: Colors.white,
-                           fontSize: 25,
+                           fontSize: 20,
                            fontFamily: "Big Shoulders Display",
                          ),
                          ),
