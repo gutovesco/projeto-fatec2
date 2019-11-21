@@ -107,7 +107,7 @@ class _CadastroState extends State<Cadastro> {
       ),),
       body: Container(
         padding: EdgeInsets.only(
-          top: 5,
+          top: 0,
           left: 40,
           right: 40,
         ),
@@ -127,7 +127,7 @@ class _CadastroState extends State<Cadastro> {
                           labelStyle: TextStyle(
                           color: Colors.black87,
                           fontWeight: FontWeight.w400,
-                          fontSize: 20,
+                          fontSize: 25,
                           fontFamily: "Big Shoulders Display",
                           ),),
                     ),
@@ -139,7 +139,7 @@ class _CadastroState extends State<Cadastro> {
                           labelStyle: TextStyle(
                           color: Colors.black87,
                           fontWeight: FontWeight.w400,
-                          fontSize: 20,
+                          fontSize: 25,
                           fontFamily: "Big Shoulders Display",
                           ),),
                     ),
@@ -152,7 +152,7 @@ class _CadastroState extends State<Cadastro> {
                           labelStyle: TextStyle(
                           color: Colors.black87,
                           fontWeight: FontWeight.w400,
-                          fontSize: 30,
+                          fontSize: 25,
                           fontFamily: "Big Shoulders Display",
                           ),
                           
@@ -167,10 +167,13 @@ class _CadastroState extends State<Cadastro> {
                           labelStyle: TextStyle(
                           color: Colors.black87,
                           fontWeight: FontWeight.w400,
-                          fontSize: 30,
+                          fontSize: 25,
                           fontFamily: "Big Shoulders Display",
                           ),),
                     ),
+
+                  SizedBox(height: 20),
+
                     DropdownButton(
                       value: _valuePeriodo,
                       items: _dropdownPeriodo
@@ -196,10 +199,12 @@ class _CadastroState extends State<Cadastro> {
                            }); 
                           }
                       },
+
+                      
                       hint: Text("Tipo de usuário",       
                        style: TextStyle(
-                       fontWeight: FontWeight.bold,
-                       color: Colors.white,
+                       fontWeight: FontWeight.w400,
+                       color: Colors.black87,
                        fontSize: 25,
                        fontFamily: "Big Shoulders Display", 
                        ),),
@@ -212,34 +217,62 @@ class _CadastroState extends State<Cadastro> {
                               labelStyle: TextStyle(
                               color: Colors.black87,
                               fontWeight: FontWeight.w400,
-                              fontSize: 30,
+                              fontSize: 25,
                               fontFamily: "Big Shoulders Display",
                           ),),
                       keyboardType: TextInputType.number,
                       obscureText: true
                               ),),
 
-                    Container(
-                      padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
-                      child: RaisedButton(
-                        child: Text("Cadastrar",       
-                        style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 25,
-                        fontFamily: "Big Shoulders Display",),),
-                        onPressed: () {
-                          iniciarCadastro();
-                        },
-                      ),
-                    ),
+                SizedBox(height: 20),
+
+                Container(
+               height: 50,
+               alignment: Alignment.centerLeft,
+               decoration: BoxDecoration(
+                 gradient: LinearGradient(
+                   begin: Alignment.topLeft,
+                   end: Alignment.bottomRight,
+                    stops: [0, 1],
+                   colors: [
+                     Color(0xFF1976D2),
+                     Color(0xFF90CAF9),
+                   ],
+                 ),
+                  borderRadius: BorderRadius.all(
+                   Radius.circular(5),
+                 ),
+               ),
+               child: SizedBox.expand(
+                 child: FlatButton(
+                   child: Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                     children: <Widget>[
+                       Text(
+                         "Cadastrar",
+                         style: TextStyle(
+                           fontWeight: FontWeight.bold,
+                           color: Colors.white,
+                           fontSize: 25,
+                           fontFamily: "Big Shoulders Display",
+                         ),
+                         ),
+                     ],
+                   ),
+                  onPressed: () {
+                      iniciarCadastro();
+                  }),
+               ),
+                   
+             ),
+                   ] )
+             ),
+
                   ],
                 ),
               )
-            ],
-          ),
-        ),
       ),
-    ));
+      ),
+        );
   }
 }
