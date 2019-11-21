@@ -95,7 +95,7 @@ class _CadastroState extends State<Cadastro> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Realizando cadastro", 
+        title: Text("Criar cadastro", 
         style: TextStyle(
           fontWeight: FontWeight.w400,
           color: Colors.white,
@@ -122,24 +122,24 @@ class _CadastroState extends State<Cadastro> {
                       controller: _nomeController,
                       decoration: InputDecoration(
                           hintText: "Ex: João",
-                          labelText: "Digite o seu nome: ", 
+                          labelText: "Seu nome ", 
                           labelStyle: TextStyle(
                           color: Colors.black87,
                           fontWeight: FontWeight.w400,
-                          fontSize: 20,
-                          fontFamily: "Big Shoulders Display",
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
                           ),),
                     ),
                     TextField(
                       controller: _emailController,
                       decoration: InputDecoration(
                           hintText: "Ex: joao@hotmail.com",
-                          labelText: "Digite o seu e-mail", 
+                          labelText: "Seu e-mail", 
                           labelStyle: TextStyle(
                           color: Colors.black87,
                           fontWeight: FontWeight.w400,
-                          fontSize: 20,
-                          fontFamily: "Big Shoulders Display",
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
                           ),),
                     ),
                     TextField(
@@ -147,12 +147,12 @@ class _CadastroState extends State<Cadastro> {
                       obscureText: true,
                       decoration: InputDecoration(
                           hintText: "Ex: J12345(mínimo 6 dígitos)",
-                          labelText: "Digite sua senha: ",
+                          labelText: "Sua senha ",
                           labelStyle: TextStyle(
                           color: Colors.black87,
                           fontWeight: FontWeight.w400,
-                          fontSize: 20,
-                          fontFamily: "Big Shoulders Display",
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
                           ),
                           
                           ),
@@ -162,12 +162,12 @@ class _CadastroState extends State<Cadastro> {
                       obscureText: true,
                       decoration: InputDecoration(
                           hintText: "Ex: J12345(mínimo 6 dígitos)",
-                          labelText: "Digite novamente sua senha: ", 
+                          labelText: "Repita sua senha ", 
                           labelStyle: TextStyle(
                           color: Colors.black87,
                           fontWeight: FontWeight.w400,
-                          fontSize: 20,
-                          fontFamily: "Big Shoulders Display",
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
                           ),),
                     ),
 
@@ -204,20 +204,20 @@ class _CadastroState extends State<Cadastro> {
                        style: TextStyle(
                        fontWeight: FontWeight.w400,
                        color: Colors.black87,
-                       fontSize: 20,
-                       fontFamily: "Big Shoulders Display", 
+                       fontSize: 17,
+                       fontFamily: "Open Sans", 
                        ),),
                     ),
                     Visibility(
                       visible: tipousuario,
                       child: TextField(
                           decoration: InputDecoration(
-                              hintText: "Digite a senha de acesso", 
+                              hintText: "Senha de acesso", 
                               labelStyle: TextStyle(
                               color: Colors.black87,
                               fontWeight: FontWeight.w400,
-                              fontSize: 20,
-                              fontFamily: "Big Shoulders Display",
+                              fontSize: 17,
+                              fontFamily: "Open Sans",
                           ),),
                       keyboardType: TextInputType.number,
                       obscureText: true
@@ -253,7 +253,7 @@ class _CadastroState extends State<Cadastro> {
                            fontWeight: FontWeight.bold,
                            color: Colors.white,
                            fontSize: 20,
-                           fontFamily: "Big Shoulders Display",
+                           fontFamily: "Open Sans",
                          ),
                          ),
                      ],
