@@ -32,7 +32,14 @@ class _AutenticacaoState extends State<Autenticacao> {
       appBar: AppBar(
         title: Text("Autenticação"),
       ),
-      body: Center(
+      body:
+      Container(
+        color: Colors.white,
+        padding: EdgeInsets.only(
+          left: 40,
+          right: 40,
+        ), 
+        child: Center(
         child: SingleChildScrollView(
           child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -51,7 +58,14 @@ class _AutenticacaoState extends State<Autenticacao> {
                   controller: _emailController,
                 decoration: InputDecoration(
                   hintText: "Ex: joao@hotmail.com", 
-                  labelText: "Digite o seu e-mail: "
+                  labelText: "Digite o seu e-mail: ",
+                              labelStyle: TextStyle(
+                              color: Colors.black87,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 17,
+                              fontFamily: "Open Sans",
+                          ),
+                  
                   ),
               ),
                 TextField(
@@ -62,18 +76,58 @@ class _AutenticacaoState extends State<Autenticacao> {
                 maxLength: 16,
                 decoration: InputDecoration(
                   hintText: "Ex: J12345(mínimo 6 dígitos)", 
-                  labelText: "Digite sua senha: "
+                  labelText: "Digite sua senha: ",
+                              labelStyle: TextStyle(
+                              color: Colors.black87,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 17,
+                              fontFamily: "Open Sans",
+                          ),
                 ),
             ),
-            RaisedButton(
-              child: Text("Entrar"),
-              onPressed: (){
-                realizarLogin();
-                              },
-                            )
-                                ],
-                              ),
-                            ) ,
+
+            SizedBox(height: 20),
+
+             Container(
+               height: 50,
+               alignment: Alignment.centerLeft,
+               decoration: BoxDecoration(
+                 gradient: LinearGradient(
+                   begin: Alignment.topLeft,
+                   end: Alignment.bottomRight,
+                    stops: [0, 1],
+                   colors: [
+                     Color(0xFF1976D2),
+                     Color(0xFF90CAF9),
+                   ],
+                 ),
+                  borderRadius: BorderRadius.all(
+                   Radius.circular(5),
+                 ),
+               ),
+               child: SizedBox.expand(
+                 child: FlatButton(
+                   child: 
+                  Center(
+                       child: Text(
+                         "Cadastrar",
+                         textAlign: TextAlign.center, 
+                         style: TextStyle(
+                           fontWeight: FontWeight.bold,
+                           color: Colors.white,
+                           fontSize: 20,
+                           fontFamily: "Open Sans",
+                         ),
+                         ),
+                  ),   
+                  onPressed: () {
+                      realizarLogin();
+                  }),
+               ),
+             ),
+
+              SizedBox(height:20),
+
                             GestureDetector(
                               child: Container(
                                 padding: EdgeInsets.fromLTRB(5, 15, 5, 5),
@@ -93,7 +147,7 @@ class _AutenticacaoState extends State<Autenticacao> {
                           ],
                         ),
                         ),
-                      ),
-                    );
+          ]),
+                    ))));
                   }
 }

@@ -105,10 +105,8 @@ class _CadastroState extends State<Cadastro> {
       body: Container(
         color: Colors.white,
         padding: EdgeInsets.only(
-          top: 0,
           left: 40,
           right: 40,
-          
         ),
       child: Center(
         child: SingleChildScrollView(
@@ -225,7 +223,7 @@ class _CadastroState extends State<Cadastro> {
 
                 SizedBox(height: 20),
 
-                Container(
+             Container(
                height: 50,
                alignment: Alignment.centerLeft,
                decoration: BoxDecoration(
@@ -244,11 +242,11 @@ class _CadastroState extends State<Cadastro> {
                ),
                child: SizedBox.expand(
                  child: FlatButton(
-                   child: Row(
-                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                     children: <Widget>[
-                       Text(
+                   child: 
+                  Center(
+                       child: Text(
                          "Cadastrar",
+                         textAlign: TextAlign.center, 
                          style: TextStyle(
                            fontWeight: FontWeight.bold,
                            color: Colors.white,
@@ -256,13 +254,11 @@ class _CadastroState extends State<Cadastro> {
                            fontFamily: "Open Sans",
                          ),
                          ),
-                     ],
-                   ),
+                  ),   
                   onPressed: () {
                       iniciarCadastro();
                   }),
                ),
-                   
              ),
                    ] )
              ),
