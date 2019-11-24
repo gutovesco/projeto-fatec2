@@ -110,7 +110,7 @@ class _AutenticacaoState extends State<Autenticacao> {
                    child: 
                   Center(
                        child: Text(
-                         "Cadastrar",
+                         "Logar",
                          textAlign: TextAlign.center, 
                          style: TextStyle(
                            fontWeight: FontWeight.bold,

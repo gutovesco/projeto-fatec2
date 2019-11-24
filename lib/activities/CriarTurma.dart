@@ -99,30 +99,48 @@ class _CriarTurmaState extends State<CriarTurma> {
               )
             ],
           ),
-          body: Center(
-            child: Container(
+          
+          body: Container(
+        color: Colors.white,
+        padding: EdgeInsets.only(
+          left: 40,
+          right: 40,
+        ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 320,
+                  Container(color: Colors.white,
                     child: Column(
                       children: <Widget>[
                         TextField(
                           controller: _nomeTurma,
                           decoration: InputDecoration(
                               hintText: "Ex: Cálculo I",
-                              labelText: "Nome da turma"),
-                        ),
+                              labelText: "Nome da turma", 
+                          labelStyle: TextStyle(
+                          color: Colors.black87,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+                          ),),
+                    ),
                         TextField(
                           controller: _senhaTurma,
                           decoration: InputDecoration(
                               hintText: "Ex: 1589",
-                              labelText: "Digite uma senha: "),
-                        ),
+                              labelText: "Digite uma senha: ", 
+                          labelStyle: TextStyle(
+                          color: Colors.black87,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+                          ),),
+                    ),
                       ],
                     ),
                   ),
+
+                 SizedBox(height: 15),
                   DropdownButton(
                     value: _valuePeriodo,
                     items: _dropdownPeriodo
@@ -136,7 +154,13 @@ class _CriarTurmaState extends State<CriarTurma> {
                         _valuePeriodo = value;
                       });
                     },
-                    hint: Text("Selecione o período"),
+                    hint: Text("Selecione o período",
+            style: TextStyle(
+              color: Colors.black87,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+            ),),     
                   ),
                   DropdownButton(
                     value: _valueCurso,
@@ -151,7 +175,13 @@ class _CriarTurmaState extends State<CriarTurma> {
                         _valueCurso = value;
                       });
                     },
-                    hint: Text("Selecione o curso   "),
+                    hint: Text("Selecione o curso   ",
+            style: TextStyle(
+              color: Colors.black87,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+            ),),     
                   ),
                   DropdownButton(
                     value: _valueModulo,
@@ -166,12 +196,17 @@ class _CriarTurmaState extends State<CriarTurma> {
                         _valueModulo = value;
                       });
                     },
-                    hint: Text("Selecione o módulo"),
+                    hint: Text("Selecione o módulo",
+            style: TextStyle(
+              color: Colors.black87,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+            ),),     
                   )
                 ],
               ),
             ),
-          ),
         );
       }
     

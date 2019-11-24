@@ -157,42 +157,92 @@ class _EditarPublicacaoState extends State<EditarPublicacao> {
   Widget build(BuildContext context) {
     return Card(
       elevation: 3,
+      child: Container(
+        color: Colors.white,
+        padding: EdgeInsets.only(
+          top: 10,
+          left: 30,
+          right: 30,
+        ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
+Row(
+children: <Widget>[
+              Text("Campos com * são obrigatórios.",
+              style: TextStyle(
+                color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 7,
+                            fontFamily: "Open Sans",
+              ),),
+            ]),   
+
           TextField(
             controller: Publicar.titulo,
             decoration: InputDecoration(
                 hintText: "Ex: Palestra no auditório sobre ChatBot",
-                labelText: "Digite um título*"),
-          ),
+                labelText: "Título*", 
+                          labelStyle: TextStyle(
+                          color: Colors.black87,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+                          ),),
+                    ),
           TextField(
             controller: Publicar.descricao,
             decoration: InputDecoration(
-                hintText: "Ex: ", labelText: "Descrição da publicação*"),
-          ),
+                hintText: "Ex: ", labelText: "Descrição da publicação*", 
+                          labelStyle: TextStyle(
+                          color: Colors.black87,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+                          ),),
+                    ),
           TextField(
             controller: Publicar.data,
             decoration: InputDecoration(
-                labelText: "Data do evento", hintText: "Dia/Mês/Ano"),
-          ),
+             hintText: "Dia/Mês/Ano", labelText: "Data do evento", 
+                          labelStyle: TextStyle(
+                          color: Colors.black87,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+                          ),),
+                    ),
           TextField(
             controller: Publicar.hora,
             decoration:
-                InputDecoration(labelText: "Horário", hintText: "Ex: 19:30"),
-          ),
-          Row(
-            children: <Widget>[
-              RaisedButton(
-                child: Text("Adicionar imagem"),
-                onPressed: () {},
-              ),
-              Text("Nome da imagem")
-            ],
-          ),
-          Text("Quem vai receber essa publicação?"),
+                InputDecoration(hintText: "Ex: 19:30", labelText: "Horário", 
+                          labelStyle: TextStyle(
+                          color: Colors.black87,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+                          ),),
+                    ),
+          SizedBox(height: 20),
+                    
+          Text("Quem vai receber essa publicação?",
+            style: TextStyle(
+              color: Colors.black87,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+            ),),     
+            
+            SizedBox(height: 10),
+
           CheckboxListTile(
-            title: Text("Ads"),
+            title: Text("Ads",
+            style: TextStyle(
+              color: Colors.black87,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+            ),),
             value: Publicar.ads,
             onChanged: (bool resultado) {
               setState(() {
@@ -201,7 +251,13 @@ class _EditarPublicacaoState extends State<EditarPublicacao> {
             },
           ),
           CheckboxListTile(
-            title: Text("Projetos"),
+            title: Text("Projetos",
+            style: TextStyle(
+              color: Colors.black87,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+            ),),
             value: Publicar.projetos,
             onChanged: (bool resultado) {
               setState(() {
@@ -210,7 +266,13 @@ class _EditarPublicacaoState extends State<EditarPublicacao> {
             },
           ),
           CheckboxListTile(
-            title: Text("Mecatrônica"),
+            title: Text("Mecatrônica",
+            style: TextStyle(
+              color: Colors.black87,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+            ),),
             value: Publicar.mecatronica,
             onChanged: (bool resultado) {
               setState(() {
@@ -219,8 +281,20 @@ class _EditarPublicacaoState extends State<EditarPublicacao> {
             },
           ),
           CheckboxListTile(
-            title: Text("Sem restrições"),
-            subtitle: Text("Todos podem visualizar está publicação"),
+            title: Text("Sem restrições",
+            style: TextStyle(
+              color: Colors.black87,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+            ),),
+            subtitle: Text("Todos podem visualizar",
+            style: TextStyle(
+              color: Colors.black87,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 17,
+                          fontFamily: "Open Sans",
+            ),),
             value: Publicar.semRestricoes,
             onChanged: (bool resultado) {
               semRestricoes(resultado);
@@ -228,7 +302,7 @@ class _EditarPublicacaoState extends State<EditarPublicacao> {
           )
         ],
       ),
-    );
+    ));
   }
 
   void semRestricoes(bool resultado) {
